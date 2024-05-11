@@ -30,4 +30,52 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .mask-gradient-x {
+    mask-image: linear-gradient(
+      to left,
+      transparent 0%,
+      black 25%,
+      black 75%,
+      transparent 100%
+    );
+  }
+
+  .mask-gradient-y {
+    z-index: 1;
+    mask-image: linear-gradient(to top, white 75%, transparent 100%);
+  }
+
+  .mask-repeat-x {
+    mask-repeat: repeat-x;
+  }
+
+  .mask-repeat-y {
+    mask-repeat: repeat-y;
+  }
+
+  .subtract-scrollbar-width {
+    width: calc(100% - var(--scrollbar-width, 30px));
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #505050 !important;
+  border-radius: 50px !important;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #383838 !important;
+  border-radius: 50px !important;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #2c2c2c !important;
 }
